@@ -526,21 +526,21 @@ footer a {
     </div>
 
 
-    <section class="offer" id="offer">
+    <section class="offer" id="offer" hidden>
       <a class="buy" id="buy" href="https://pay.kiwify.com.br/Dr2h6zB?afid=PlkfAbG9">Comprar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </section>
 
   </main>
 
   <footer>
-    © <span id="yr">2026</span> Estúdio de Vídeos · @yurizandotv
+    © <span id="yr">2026</span> Estúdio de Vídeos
   </footer>
 </div>
 
 <script>
 // ===== Ajustes =====
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/Dr2h6zB?afid=PlkfAbG9';
-const REVEAL_AT_SECONDS = null;   // null = duração do vídeo − 8 s (calculado no loadedmetadata); ou um número fixo em segundos
+const REVEAL_AT_SECONDS = 60;     // botão Comprar aparece com 1 minuto de vídeo (null = REVEAL_BEFORE_END segundos antes do fim)
 const REVEAL_BEFORE_END = 35;   // aparece no "clica no botão comprar" (fim do pitch)
 const REVEAL_KEY = 'evoficial_revealed';
 // ===================
@@ -567,12 +567,13 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { fi
 buy.href = CHECKOUT_URL;
 
 // ----- Reveal the buy button only at the end -----
-let revealAt = typeof REVEAL_AT_SECONDS === 'number' ? REVEAL_AT_SECONDS : null, revealed = true;
+let revealAt = typeof REVEAL_AT_SECONDS === 'number' ? REVEAL_AT_SECONDS : null, revealed = false;
 function reveal(fromPlayback) {
   if (revealed) return;
   revealed = true;
   offer.hidden = false;
   offer.classList.add('in');
+  store(REVEAL_KEY, '1');
 
   if (fromPlayback) {
     const r = offer.getBoundingClientRect();
@@ -586,6 +587,8 @@ function setRevealFromDuration() {
   const d = vsl.duration;
   if (isFinite(d) && d > 0) revealAt = Math.max(0, d - REVEAL_BEFORE_END);
 }
+// quem já viu o botão antes (voltou pra página) não espera de novo
+if (store(REVEAL_KEY) === '1') reveal(false);
 vsl.addEventListener('loadedmetadata', setRevealFromDuration);
 if (vsl.readyState >= 1) setRevealFromDuration();
 
