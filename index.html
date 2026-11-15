@@ -30,7 +30,7 @@ if(!cur.utm_source){
 var ch=0;K.forEach(function(k){if(add[k]&&!q.get(k)){q.set(k,add[k]);ch=1}});
 if(ch&&history.replaceState)history.replaceState(history.state,'',L.pathname+'?'+q.toString()+L.hash);
 var P=pick(q);
-function fix(a){try{if(!a||!a.href||a.href.indexOf('pay.kiwify.com.br')<0)return;var u=new url("https://estudio-videos.pages.dev/oficial/a.href"),w=u.searchParams,o=u.toString();
+function fix(a){try{if(!a||!a.href||a.href.indexOf('pay.kiwify.com.br')<0)return;var u=new URL(a.href),w=u.searchParams,o=u.toString();
  for(var k in P)if(k!=='src'&&!w.get(k))w.set(k,P[k]);
  if(!w.get('utm_content'))w.set('utm_content',P.src||site());
  if(w.get('utm_campaign')==='sem-utm'||!w.get('src'))w.set('src',w.get('utm_content'));
@@ -565,7 +565,7 @@ footer a {
 
 
     <section class="offer" id="offer">
-      <a class="buy" id="buy" href="https://pay.kiwify.com.br/jX8GYQl?afid=PlkfAbG9">Comprar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="buy" id="buy" href="https://pay.kiwify.com.br/Dr2h6zB?afid=PlkfAbG9">Comprar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </section>
 
   </main>
@@ -577,7 +577,7 @@ footer a {
 
 <script>
 // ===== Ajustes =====
-const CHECKOUT_URL = 'https://pay.kiwify.com.br/jX8GYQl?afid=PlkfAbG9';
+const CHECKOUT_URL = 'https://pay.kiwify.com.br/Dr2h6zB?afid=PlkfAbG9';
 const REVEAL_AT_SECONDS = null;   // null = duração do vídeo − 8 s (calculado no loadedmetadata); ou um número fixo em segundos
 const REVEAL_BEFORE_END = 35;   // aparece no "clica no botão comprar" (fim do pitch)
 const REVEAL_KEY = 'evoficial_revealed';
